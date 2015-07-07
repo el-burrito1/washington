@@ -1,66 +1,71 @@
 extends layout
 
 block content
-  div(class='row')
-    div(class='col-md-12' style='height:300px;background-color:white;')
-        h1 Development Opportunity
-        p 5531 W Washington Blvd Los Angeles, CA 90016
-  div(class='row')
-    div(class='col-md-6' style='margin-top:20px;background-color:white;height:429px;')
-        h4(style='background-color:#FF9800;padding-top:20px;padding-bottom:20px;padding-left:10px;color:white') Development Opportunity
-        br
-        p Located less than one mile from the Culver City Arts District and Blackwelder Creative Campus, 5531 W Washington is being offered as a creative office development opportunity. This property is ideal for a developer or owner/user looking for an entry into the supply constrained Culver City creative office market.
-        br
-        div(style='width:50%;margin-left:5%')
-            p Building Size: <span class='building-info'>Approximately 1,697 square feet.</span>
-            p Land Size: <span class='building-info'>Approximately 5,614 square feet.</span>
-            p APN: <span class='building-info'>Building 5064-017-001</span>
-            p      <span class='building-info'>Land     5064-017-002</span>
-            br
-            br
-            p Parking:<span class='building-info'> 5 Spaces</span>
-    div(class='col-md-6' style='margin-top:20px;')
-        img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7152.JPG' style='width:100%;')
-    div(class='row')
-        div(class='col-md-6' style='margin-top:20px;')
-            img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7157.JPG' style='width:100%;height:429px;')
+  div(class='container')  
+      div(class='row')
+        div(class='col-md-12' style='height:300px;background-color:white;')
+            h1 Development Opportunity
+            p 5531 W Washington Blvd Los Angeles, CA 90016
+  div(class='container')
+      div(class='row')
         div(class='col-md-6' style='margin-top:20px;background-color:white;height:429px;')
-            h4(style='background-color:#00BCD4;padding-top:20px;padding-bottom:20px;padding-left:10px;color:white') Market Overview
+            h4(style='background-color:#FF9800;padding-top:20px;padding-bottom:20px;padding-left:10px;color:white') Development Opportunity
             br
-            p The West Los Angeles office submarket has recorded positive net absorption every quarter since 2012 due in large part to the high demand for creative office space from technology, media, and entertainment users. Culver City recorded below market rents relative to the West LA submarket which presents the opportunity for future upside as the significant supply constraint of creative office space in West LA becomes exposed. 
-            p Nearby developments include:
-            ul
-                li The Platform: Four Acre retail project being developed by The Runyon Group. The Platform is set to open in Spring 2016 with tenants to include clothing store Aesop, Blue Bottle Coffee, and a rooftop restaurant from three-Michelin-starred New York chef Michael White. 
+            p Located less than one mile from the Culver City Arts District and Blackwelder Creative Campus, 5531 W Washington is being offered as a creative office development opportunity. This property is ideal for a developer or owner/user looking for an entry into the supply constrained Culver City creative office market.
+            br
+            div(style='width:50%;margin-left:5%')
+                p Building Size: <span class='building-info'>Approximately 1,697 square feet.</span>
+                p Land Size: <span class='building-info'>Approximately 5,614 square feet.</span>
+                p APN: <span class='building-info'>Building 5064-017-001</span>
+                p      <span class='building-info'>Land     5064-017-002</span>
                 br
-                li Access Culver City: 115-unit mixed-user with 31,000 square feet of retail space developed by Greystar Real Estate Partners. The development will include a 7,000 square foot outdoor plaza adjacent to the Culver City Metro Station. 
-    div(class='row')
-      div(class='col-md-4' style='background-color:white;color:white;margin-top:20px;padding-bottom:40px;height:200px;')
-          div(style='padding-left:0px;background-color:#8BC34A;height:100%')
-              h3(style='color:white;padding-top:20px;padding-bottom:10px;padding-left:10px;') Asking Price: $1.8mm
-              h4(style='padding-left:10px;') Current Offers: 0
-              h4(style='padding-left:10px;') Website Traffic: 366 Visitors
-      div(class='col-md-4' style='background-color:white;color:white;margin-top:20px;padding-bottom:40px;height:200px;')
-          div(style='padding-left:10px;background-color:#E91E63;height:100%')
-              h3(style='padding-top:20px;padding-bottom:20px;padding-left:10px;') Sale Comps 
-              h4(style='padding-left:10px;') 123 Washington Blvd: $283/SF
-              h4(style='padding-left:10px;') 1301 Washington Blvd: $301/SF
-      div(class='col-md-4' style='margin-left:;margin-top:20px;height:200px;background-color:white;color:white;padding-bottom:40px;')
-          div(style='padding-left:10px;background-color:#607D8B;height:100%')
-              h3(style='padding-top:20px;padding-left:10px;padding-bottom:20px;') Lease Comps
-              h4(style='padding-left:10px;') 1207 Venice Blvd: $2.68/SF
-              h4(style='padding-left:10px;') 1999 Washington Blvd: $3.00/SF
-    div(class='row' style='margin-top:2%;margin-bottom:2%')
-        div(class='col-md-5' style='color:white;margin-top:20px;padding-bottom:0px;padding-left:0px;padding-right:0px;')
-            div(id='map-canvas' class='map-canvas map-height' style='width:100%; height:370px;padding-top:2%;')
-            form(role='form' id='contactForm' action='#')
-                div(class='form-group' style='margin-right:0%;')
-                    input(name='name' class='form-control' placeholder='name' style='margin-top:30px; margin-bottom:18px;')
-                    input(name='email' type='email' class='form-control' placeholder='email' style='margin-bottom:18px;')
-                    input(name='phone' type='text' class='form-control' style='margin-bottom:28px;' placeholder='phone number')  
-                    button(id='button' type='submit' class='btn btn-default mobile-button-adjust' style='color:white;background-color:#E6974C;width:100%') Request More Information
-                        i(id='spinner' style='margin-left:9px')
-        div(class='col-md-7')
-            img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7141.JPG' style='width:100%;margin-top:20px;')
+                br
+                p Parking:<span class='building-info'> 5 Spaces</span>
+        div(class='col-md-6' style='margin-top:20px;')
+            img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7152.JPG' style='width:100%;')
+    div(class='container')
+        div(class='row')
+            div(class='col-md-6' style='margin-top:20px;')
+                img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7157.JPG' style='width:100%;height:429px;')
+            div(class='col-md-6' style='margin-top:20px;background-color:white;height:429px;')
+                h4(style='background-color:#00BCD4;padding-top:20px;padding-bottom:20px;padding-left:10px;color:white') Market Overview
+                br
+                p The West Los Angeles office submarket has recorded positive net absorption every quarter since 2012 due in large part to the high demand for creative office space from technology, media, and entertainment users. Culver City recorded below market rents relative to the West LA submarket which presents the opportunity for future upside as the significant supply constraint of creative office space in West LA becomes exposed. 
+                p Nearby developments include:
+                ul
+                    li The Platform: Four Acre retail project being developed by The Runyon Group. The Platform is set to open in Spring 2016 with tenants to include clothing store Aesop, Blue Bottle Coffee, and a rooftop restaurant from three-Michelin-starred New York chef Michael White. 
+                    br
+                    li Access Culver City: 115-unit mixed-user with 31,000 square feet of retail space developed by Greystar Real Estate Partners. The development will include a 7,000 square foot outdoor plaza adjacent to the Culver City Metro Station. 
+    div(class='container')
+        div(class='row')
+          div(class='col-md-4' style='background-color:white;color:white;margin-top:20px;padding-bottom:40px;height:200px;')
+              div(style='padding-left:0px;background-color:#8BC34A;height:100%')
+                  h3(style='color:white;padding-top:20px;padding-bottom:10px;padding-left:10px;') Asking Price: $1.8mm
+                  h4(style='padding-left:10px;') Current Offers: 0
+                  h4(style='padding-left:10px;') Website Traffic: 366 Visitors
+          div(class='col-md-4' style='background-color:white;color:white;margin-top:20px;padding-bottom:40px;height:200px;')
+              div(style='padding-left:10px;background-color:#E91E63;height:100%')
+                  h3(style='padding-top:20px;padding-bottom:20px;padding-left:10px;') Sale Comps 
+                  h4(style='padding-left:10px;') 123 Washington Blvd: $283/SF
+                  h4(style='padding-left:10px;') 1301 Washington Blvd: $301/SF
+          div(class='col-md-4' style='margin-left:;margin-top:20px;height:200px;background-color:white;color:white;padding-bottom:40px;')
+              div(style='padding-left:10px;background-color:#607D8B;height:100%')
+                  h3(style='padding-top:20px;padding-left:10px;padding-bottom:20px;') Lease Comps
+                  h4(style='padding-left:10px;') 1207 Venice Blvd: $2.68/SF
+                  h4(style='padding-left:10px;') 1999 Washington Blvd: $3.00/SF
+    div(class='container')
+        div(class='row' style='margin-top:2%;margin-bottom:2%')
+            div(class='col-md-5' style='color:white;margin-top:20px;padding-bottom:0px;padding-left:0px;padding-right:0px;')
+                div(id='map-canvas' class='map-canvas map-height' style='width:100%; height:370px;padding-top:2%;')
+                form(role='form' id='contactForm' action='#')
+                    div(class='form-group' style='margin-right:0%;')
+                        input(name='name' class='form-control' placeholder='name' style='margin-top:30px; margin-bottom:18px;')
+                        input(name='email' type='email' class='form-control' placeholder='email' style='margin-bottom:18px;')
+                        input(name='phone' type='text' class='form-control' style='margin-bottom:28px;' placeholder='phone number')  
+                        button(id='button' type='submit' class='btn btn-default mobile-button-adjust' style='color:white;background-color:#E6974C;width:100%') Request More Information
+                            i(id='spinner' style='margin-left:9px')
+            div(class='col-md-7')
+                img(src='https://s3-us-west-1.amazonaws.com/washingtonblvd/propertyPhotos/_MG_7141.JPG' style='width:100%;margin-top:20px;')
     
       
    
